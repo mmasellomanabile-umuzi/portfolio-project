@@ -1,30 +1,138 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="header">
-        <h1>About Me</h1>
-    </div>
-    
-    <div>
-        <h2>My Background</h2>
-        <p>I have been working in web development for several years.</p>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="page-title">
+                <h1>Behind the Code</h1>
+            </div>
+    </nav>
+
+    <main>
+        <section>
+            <h2 class="hidden">About</h2>
         
-        <h3>Skills</h3>
-        <!-- Table should be here but is missing -->
-        <p>HTML, CSS, JavaScript</p>
+          <article id="Photo">
+             <h2>Meet Mmasello </h2>
+             <img src="images/MyPic.jpg" alt="picture of developer">
+<br>
+<br>
+            <div>
+                <p><a href="contact.html">Get your tailored quote here </a></p>
+            </div>
+        </article>
+
+        <article id="Background">
+            <h2>Background</h2>
+            <p> I am a dedicated Software Developer with a passion for building clean, responsive, and user-focused web applications. My expertise spans both front-end and back-end development, enabling me to create seamless digital solutions from concept to deployment. I enjoy transforming ideas into functional, visually appealing experiences using modern web technologies such as HTML, CSS, JavaScript, and Java. Committed to continuous learning and professional growth, I am always expanding my technical skills to develop innovative and high-quality software solutions. </p>
+        </article>
+
+        <article>
+            <h2>Skills</h2>
+            <table>
+    <thead>
+        <tr>
+            <th>Skill</th>
+            <th>Level</th>
+            <th>Experience</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>HTML</td>
+            <td>Advanced</td>
+            <td>3+ years</td>
+        </tr>
+        <tr>
+            <td>CSS</td>
+            <td>Intermediate</td>
+            <td>2+ years</td>
+        </tr>
+        <tr>
+            <td>JavaScript</td>
+            <td>Intermediate</td>
+            <td>2+ years</td>
+        </tr>
+
+        <tr>
+            <td>Java</td>
+            <td>Intermediate</td>
+            <td>2+ years</td>
+        </tr>
+
+        <tr>
+            <td>Github</td>
+            <td>Intermediate</td>
+            <td>1+ years</td>
+        </tr>
+      </tbody>
+    </table>
+   </article>
+
+</section>
+</main>
+    <br><br><br>
+  
+  <footer>
+      <div class="footer-container">
+
+       <div class="footer-section">
+            <img src="images/logo.png" alt="footer logo" class="footer-logo">
+       </div>
+
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p>Mobile ☎:  +27 79 111 1111</p>
+            <p>
+                ✉: 
+                <a href="mailto:mmasellok2@gmail.com">
+                    mmasellok2@gmail.com
+                </a>
+            </p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Connect</h3>
+
+            <div class="footer-social-icons">
+                <a href="https://facebook.com" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+
+                <a href="https://instagram.com" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://linkedin.com" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i> 
+                </a>
+
+                <a href="https://github.com" target="_blank">
+                <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
+
     </div>
-    
-    <div>
-        <h3>My Photo</h3>
-        <img src="images/profile.jpg">
-    </div>
-    
-    <div class="footer">
-        <p>Contact me at email@example.com</p>
-    </div>
-</body>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 Mmasello Manabile. All Rights Reserved.</p>
+     </div>
+   </footer>
+
+  </body>
 </html>

@@ -1,30 +1,129 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-    <div class="header">
-        <h1>Contact Me</h1>
-    </div>
-    
-    <div>
-        <h2>Get In Touch</h2>
-        
-        <form>
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Email">
-            <textarea placeholder="Message"></textarea>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="page-title">
+                <h1>Get in Touch</h1>
+            </div>
+    </nav>
+
+    <section class="contact-page">
+         <h2 class="hidden">Contact</h2>
+          <article id="contact-info">
+            <h2>Contact Us</h2>
+            <h3>Adress &#8962;: </h3> 
+                <p>Infinity Business Park, Block D, 4 Pieter Wenning Rd, Fourways, Johannesburg, 2191</p>
+            <br>
+                <h3>Mobile ☎: </h3>
+                <p> <a href="tel:+27791111111"> +27 79 111 1111</a></p>
+            <br>
+                <h3>E-mail ✉: </h3>
+                <p><a href="mailto:mmasellok2@gmail.com">
+                    mmasellok2@gmail.com</a>
+                </p>    
+<br>
+            <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3585.9353513952315!2d28.00875757419219!3d-26.002935055804986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9576ce93752243%3A0xc4c0c64a3492f5df!2sInfinity%20Business%20Park!5e0!3m2!1sen!2sza!4v1788596105613!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
+            </iframe>   
+
+        </article> 
+  
+        <article id="form">
+        <form action="submit.html" method="GET">
+            <h2>Enter your info</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Ngoako Rams" pattern="[A-Za-z ]+" >
             
-            <!-- Missing: labels, more input types, validation -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="NgoaksR@umuzi.com" required>
             
-            <button>Send</button>
+            <label for="phone">Contact Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="051 234 5678" minlength="10" maxlength="10" pattern="[0-9]+">
+            <br>          
+            <label>Preferred Contact Method:</label>
+            
+            <div class="radio-group">
+                <label for="contact-email">Email</label>
+                <input type="radio" id="contact-email" name="contact-method" value="email">
+            
+                <label for="contact-phone">Phone</label>
+                <input type="radio" id="contact-phone" name="contact-method" value="phone">
+            </div> 
+            <br>
+            <label for="message">Message</label>
+            <textarea id="message" name="message"  placeholder="How can I make your day?"></textarea>
+            <br>
+            <div class="checkbox-group">
+                <label for="marketing">Opt me in for offers!</label>
+                <input type="checkbox" id="marketing" name="marketing" >
+            </div>
+
+            <button type="submit"> Send </button>
         </form>
-    </div>
+      </article>  
+     </section>  
     
-    <div class="footer">
-        <p>Contact me at email@example.com</p>
+<footer>
+    <div class="footer-container">
+
+        <div class="footer-section">
+            <img src="images/logo.png" alt="footer logo" class="footer-logo">
+        </div>
+
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p>Mobile ☎:  +27 79 111 1111</p>
+            <p>
+                ✉: 
+                <a href="mailto:mmasellok2@gmail.com">
+                    mmasellok2@gmail.com
+                </a>
+            </p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Connect</h3>
+
+            <div class="footer-social-icons">
+                <a href="https://facebook.com" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+
+                <a href="https://instagram.com" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://linkedin.com" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i> 
+                </a>
+
+                <a href="https://github.com" target="_blank">
+                <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
+
     </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 Mmasello Manabile. All Rights Reserved.</p>
+    </div>
+</footer>
 </body>
 </html>

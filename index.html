@@ -1,28 +1,161 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
-</head>
+
+
+    </head>
+
 <body>
-    <div class="header">
-        <h1>My Portfolio</h1>
-        <!-- Navigation missing -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="social-icons">
+            <a href="mailto:mmasellok2@gmail.com">
+            <i class="fa-solid fa-envelope"></i>
+            </a>
+
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+            <a href="https://github.com" target="_blank">
+            <i class="fa-brands fa-github"></i>
+            </a>
+
+        </div>
+    </nav>
+
+   
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-left">
+                <h1>Mmasello Manabile</h1>
+
+
+                <p id="typing-text">
+                <script>
+                    const text = "Innovation. Elegance. Efficiency.";
+                    const typingElement = document.getElementById("typing-text");
+
+                    let i = 0;
+
+                    function typeText() {
+                        typingElement.textContent = text.slice(0, i);
+                        i++;
+
+                        if (i <= text.length) {
+                            setTimeout(typeText, 150);
+                        } else {
+                            setTimeout (() => {
+                                i = 0;
+                                typingElement.textContent = " ";
+                                typeText ();
+                            }, 2000);
+                        }
+                    }
+
+                    typeText();
+                </script>
+                </p>
+            </div>
+
+            <div class="hero-image">
+                <img src="images/hero.png" alt="profile Image">
+            </div>
+
+            <div class="hero-right">
+                <h2>&lt;Software Developer/&gt;</h2>
+
+                <p>
+                    Creating modern and responsive digital experiences.
+                </p>
+            </div>
+
+        </section>
+<br>
+<br>
+       
+        <section class="intro">
+                
+            <h2>Building Solutions Through Code</h2>
+
+            <p>
+                I am an aspiring Software and Web Developer with a passion
+                for building modern, responsive, and user-friendly digital
+                solutions. I enjoy combining creativity with technical skills
+                to create websites and applications that deliver meaningful
+                user experiences. With knowledge of HTML, CSS, JavaScript,
+                and Java, I am continuously expanding my expertise,
+                embracing new challenges, and growing as a developer
+                through continuous learning and hands-on experience.
+            </p>
+
+            <a href="projects.html">
+                Click here to see my work!
+            </a>
+
+        </section>
+
+    </main>
+
+<footer>
+    <div class="footer-container">
+
+        <div class="footer-section">
+            <img src="images/logo.png" alt="footer logo" class="footer-logo">
+        </div>
+
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p>Mobile ☎:  +27 79 111 1111</p>
+            <p>
+                ✉: 
+                <a href="mailto:mmasellok2@gmail.com">
+                    mmasellok2@gmail.com
+                </a>
+            </p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Connect</h3>
+
+            <div class="footer-social-icons">
+                <a href="https://facebook.com" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+
+                <a href="https://instagram.com" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://linkedin.com" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i> 
+                </a>
+
+                <a href="https://github.com" target="_blank">
+                <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
+
     </div>
-    
-    <div class="hero">
-        <h2>Welcome to My Portfolio</h2>
-        <p>I am a web developer passionate about creating beautiful websites.</p>
-        <img src="images/hero.jpg">
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 Mmasello Manabile. All Rights Reserved.</p>
     </div>
-    
-    <div class="intro">
-        <h2>About Me</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    
-    <div class="footer">
-        <p>Contact me at email@example.com</p>
-    </div>
+</footer>
+
 </body>
 </html>

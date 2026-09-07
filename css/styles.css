@@ -578,6 +578,9 @@ footer {
         margin: 20px 0;
     }
 
+    section {
+grid-template-columns: 1fr;
+}
 /* Navigation */
 
 nav ul {

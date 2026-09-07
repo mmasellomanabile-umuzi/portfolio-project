@@ -158,6 +158,9 @@ index.html
 
 in any modern web browser (Google Chrome or MS Edge).
 
+### Click on below linkto view published site: 
+https://mmasellomanabile-umuzi.github.io/portfolio-project/
+
 
 ## Author
 

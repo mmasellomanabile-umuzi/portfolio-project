@@ -114,6 +114,13 @@ portfolio-website/
 │   ├── project1.jpg
 │   ├── project2.jpg
 │   └── project3.jpg
+├── design/
+    ├── wireframe.pdf
+    └── issuesIdentified.pdf
+
+├── screenshots/
+    ├── After(FinalProject)
+│   └── Before(starterCode)
 │
 └── README.md
 
@@ -138,7 +145,7 @@ This project helped strengthen my understanding of:
 
 using bash use the following command: 
 
-git clone https://github.com/mmasellomanabile-umuzi/portfolio-project
+git clone https://github.com/mmasellomanabile-umuzi/portfolio-project.git
 
 
 ### Run the Project

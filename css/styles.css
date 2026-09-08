@@ -644,8 +644,43 @@ address {
 }
 
 /* ===============================
+   GLOBAL RULES
+================================ */
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Footer positioning */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+
+/* ===============================
    RESPONSIVE DESIGN
 ================================ */
+
 @media (max-width: 768px) {
 
     .header {
@@ -655,6 +690,7 @@ address {
 
     nav ul {
         flex-direction: column;
+        align-items: center;
     }
 
     .hero {
@@ -662,16 +698,34 @@ address {
         text-align: center;
     }
 
-    .hero-left,
-    .hero-right,
+    .hero-left-column,
+    .hero-right-column,
     .hero-image {
         width: 100%;
     }
 
-    .hero-left h2, .hero-right h2 {
-        font-size: 2rem;
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
     }
 
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-left-column,
+    .hero-right-column,
+    .hero-image {
+        width: 100%;
+    }
+
+.hero-left-column h1,
+.hero-right-column h1,
+.hero-title {
+    font-size: 2rem;
+}
     .hero-image img {
         width: 250px;
         margin: 20px 0;
@@ -734,6 +788,7 @@ height: 300px;
 .footer-container {
 flex-direction: column;
 text-align: center;
+gap:1rem;
     }
 
 .about-section {

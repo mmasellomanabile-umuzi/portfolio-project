@@ -2,73 +2,166 @@
 
 ## Overview
 
-This project is a responsive multi-page portfolio website developed to showcase my skills, experience, projects, and contact information as an aspiring Software Developer and Java Developer.
+This project is a multi-page portfolio website created as part of a capstone assessment focused on HTML5, CSS3, accessibility, semantic web development, responsive design, debugging, and code quality improvement.
 
-The website demonstrates my understanding of front-end web development principles, responsive design, semantic HTML, CSS styling, navigation, form validation, and user experience design.
+The original starter code provided was incomplete and contained multiple HTML and CSS issues. The purpose of this project was to identify those issues, correct errors, improve accessibility, implement missing features, and transform the website into a professional portfolio site.
 
-## Live Features
+The completed website showcases my background, skills, projects, and contact information as an aspiring Software Developer.
+
+## Project Purpose
+
+The website serves as a personal portfolio designed to:
+
+- Introduce visitors to my professional profile
+- Showcase my technical skills and experience
+- Highlight selected projects
+- Provide multiple ways to contact me
+- Demonstrate best practices in HTML and CSS development
+
+
+## Issues Found in the Starter Code
+
+The starter code contained numerous HTML and CSS issues, including:
+
+### HTML Issues
+
+- Missing semantic HTML elements
+- Missing navigation links
+- Missing image alt attributes
+- Missing table structure on the About page
+- Incomplete contact form
+- Missing form labels
+- Accessibility concerns
+- Structural inconsistencies between pages
+
+### CSS Issues
+
+- Limited selector usage
+- Missing navigation styling
+- Missing table styling
+- Missing form styling
+- Poor spacing and alignment
+- Lack of hover states
+- Limited box-model implementation
+- Inconsistent layout structure
+- Weak colour and typography hierarchy
+
+## Fixes Implemented
+
+The following improvements were made throughout the project:
+
+### HTML Improvements
+
+- Added semantic HTML elements including:
+  - `<nav>`
+  - `<main>`
+  - `<section>`
+  - `<article>`
+  - `<footer>`
+
+- Added navigation menus to all pages
+- Added descriptive alt text to images
+- Created a skills table with proper table structure
+- Improved page structure and consistency
+- Added a fully functional contact form
+- Added HTML5 validation attributes
+- Connected all pages through internal links
+
+### CSS Improvements
+
+- Added navigation styling and hover effects
+- Added responsive layouts using Flexbox
+- Implemented multiple selector types
+- Added form styling
+- Added table styling
+- Improved spacing and alignment
+- Improved visual hierarchy
+- Added hover and focus interactions
+- Added responsive design adjustments
+- Improved overall presentation and user experience
+
+
+## HTML Structure and Semantic Design
+
+The website uses semantic HTML5 elements to improve accessibility, readability, and maintainability. This semantic structure and design improves document organization and supports assistive technologies.
+
+### Structure Used
+
+- `<nav>` for navigation
+- `<main>` for page content
+- `<section>` for content grouping
+- `<article>` for independent content blocks
+- `<footer>` for site footer information
+
+
+## CSS Styling Approach
+
+The design focuses on a clean, professional appearance while demonstrating CSS fundamentals.
+
+### Selector Types Used
+
+- Element selectors
+- Class selectors
+- ID selectors
+- Descendant selectors
+- Pseudo-class selectors
+- Attribute selectors
+- Combination selectors
+
+### Styling Features
+
+- Flexbox layouts
+- Responsive adjustments using media queries
+- Box model implementation
+- Hover effects
+- Focus states
+- Gradient text styling
+- Custom button styling
+- Responsive images
+- Table formatting
+
+
+## Accessibility Improvements
+
+Several accessibility enhancements were made:
+
+- Added descriptive alt text to all images
+- Added labels to all form controls
+- Added HTML5 form validation
+- Included hidden headings where appropriate
+- Improved semantic page structure
+- Added keyboard-friendly navigation states with ":focus"
+- Improved readability and layout consistency
+
+
+## Pages Included
 
 ### Home Page
-The landing page introduces visitors to my portfolio and provides a brief overview of my software development journey.
 
-Features include:
-- Professional introduction
-- Personal branding
-- Developer profile image
-- Navigation menu
+- Introduction section
+- Hero image
 - Social media links
-- Call-to-action section (with link to proects page)
+- Call-to-action section, with button link to about.html
 
 ### About Page
 
-The About page provides more information about my background and technical abilities.
-
-Features include:
-- Personal biography
-- Professional photograph
+- Personal background
 - Skills table
-- Experience summary
-- Direct link to contact page
+- Professional image
+- Contact link
 
 ### Projects Page
 
-The Projects page showcases development projects completed during my learning journey.
-
-Projects featured include:
-
-#### Project 1
-Responsive website built using:
-- HTML
-- CSS
-- JavaScript
-
-#### Project 2
-Task Manager Mobile Application
-
-#### Project 3
-Modern E-commerce Website
-
-The page also contains a link to my GitHub profile where visitors can explore additional work.
+- Project showcase cards
+- Project images
+- GitHub profile link
 
 ### Contact Page
 
-The Contact page allows visitors to contact me directly.
-
-Features include:
-- Physical business address
-- Clickable telephone link
-- Clickable email link
+- Contact details
 - Embedded Google Maps location
 - Contact form
-
-#### Form Fields
-
-- Name
-- Email Address
-- Contact Number
-- Preferred Contact Method
-- Message
-- Marketing Opt-in Checkbox
+- Form validation
 
 #### Form Validation
 
@@ -86,13 +179,15 @@ The form uses HTML validation to ensure data quality:
 
 -Accepts numeric values only.
 
+
 ## Technologies Used
 
 - HTML5
 - CSS3
-- JavaScript
-- Font Awesome Icons
+- Font Awesome
 - Google Maps Embed
+- Git
+- GitHub
 
 ## Project Structure
 
@@ -109,34 +204,22 @@ portfolio-website/
 │   └── styles.css
 │
 ├── images/
+│   ├── hero.png
 │   ├── MyPic.jpg
 │   ├── logo.png
 │   ├── project1.jpg
 │   ├── project2.jpg
 │   └── project3.jpg
+│
 ├── design/
-    ├── wireframe.pdf
-    └── issuesIdentified.pdf
-
+│   ├── wireframe.pdf
+│   └── issuesIdentified.pdf
+│
 ├── screenshots/
-    ├── After(FinalProject)
-│   └── Before(starterCode)
+│   ├── Before(starterCode)
+│   └── After(FinalProject)
 │
 └── README.md
-
-## Key Learning Outcomes
-
-This project helped strengthen my understanding of:
-
-- Semantic HTML
-- Responsive Web Design
-- Navigation Structures
-- CSS Layout Techniques
-- Form Development
-- Input Validation
-- User Experience Design
-- Git and GitHub
-- Portfolio Development
 
 
 ## Installation
@@ -158,13 +241,14 @@ index.html
 
 in any modern web browser (Google Chrome or MS Edge).
 
-### Click on below linkto view published site: 
+### Click on below link to view published site: 
 https://mmasellomanabile-umuzi.github.io/portfolio-project/
+
+# W3C Validation:
+
+- screenshots included in the screenshots folder. 0 errors found on all pages. 
 
 
 ## Author
 
 ### Mmasello Manabile
-
-Aspiring Software Developer.
-

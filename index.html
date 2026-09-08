@@ -6,9 +6,7 @@
     <title>Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
-
-
-    </head>
+</head>
 
 <body>
     <nav>
@@ -19,7 +17,7 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
 
-        <div class="social-icons">
+        <section class="social-icons">
             <a href="mailto:mmasellok2@gmail.com">
             <i class="fa-solid fa-envelope"></i>
             </a>
@@ -32,29 +30,27 @@
             <i class="fa-brands fa-github"></i>
             </a>
 
-        </div>
+        </section>
     </nav>
 
-   
-    <main>
-
-        <section class="hero">
-
-            <div class="hero-left">
-                <h1>Mmasello Manabile</h1>
-
-
-                <p id="typing-text">
+   <main>
+    <section class="hero">
+    
+        <header class="hero-left-column">
+            <h1 class="hero-right">
+                <span class="hero-right">Mmasello</span><br>
+                <span class="hero-icon">Manabile</span>
+            </h1>
+            <br>
+            
+            <p id="typing-text">
                 <script>
                     const text = "Innovation. Elegance. Efficiency.";
                     const typingElement = document.getElementById("typing-text");
-
                     let i = 0;
-
                     function typeText() {
                         typingElement.textContent = text.slice(0, i);
                         i++;
-
                         if (i <= text.length) {
                             setTimeout(typeText, 150);
                         } else {
@@ -65,97 +61,106 @@
                             }, 2000);
                         }
                     }
-
                     typeText();
                 </script>
-                </p>
-            </div>
-
-            <div class="hero-image">
-                <img src="images/hero.png" alt="profile Image">
-            </div>
-
-            <div class="hero-right">
-                <h2>&lt;Software Developer/&gt;</h2>
-
-                <p>
-                    Creating modern and responsive digital experiences.
-                </p>
-            </div>
-
-        </section>
-<br>
-<br>
-       
-        <section class="intro">
-                
-            <h2>Building Solutions Through Code</h2>
-
-            <p>
-                I am an aspiring Software and Web Developer with a passion
-                for building modern, responsive, and user-friendly digital
-                solutions. I enjoy combining creativity with technical skills
-                to create websites and applications that deliver meaningful
-                user experiences. With knowledge of HTML, CSS, JavaScript,
-                and Java, I am continuously expanding my expertise,
-                embracing new challenges, and growing as a developer
-                through continuous learning and hands-on experience.
             </p>
+        </header>
 
-            <a href="projects.html">
-                Click here to see my work!
-            </a>
+        <div class="hero-image">
+            <img src="images/hero.png" alt="profile Image">
+        </div>
 
-        </section>
+        <article class="hero-right-column">
+            <h1 class="hero-title">
+                <span class="hero-icon">&lt;</span>
+                <span class="hero-right">Software Developer</span>
+                <span class="hero-icon">/&gt;</span>
+            </h1>
 
-    </main>
+            <br> <br>
+            <p class="hero-desc">
+                Creating modern and responsive digital experiences.
+            </p>
+        </article>
 
+    </section>
+
+    <section class="about-section">
+
+    <section class="intro-card">
+
+        <h2>Building Solutions Through Code</h2>
+
+        <p>
+            I am an aspiring Software and Web Developer with a passion
+            for building modern, responsive, and user-friendly digital
+            solutions. I enjoy combining creativity with technical skills
+            to create websites and applications that deliver meaningful
+            user experiences. With knowledge of HTML, CSS, JavaScript,
+            and Java, I am continuously expanding my expertise,
+            embracing new challenges, and growing as a developer
+            through continuous learning and hands-on experience.
+        </p>
+
+        <div>
+        <p><a href="projects.html" class="project-link">
+            Click here to see my work!
+        </a></p>
+        </div>
+
+    </section>
+
+    <section class="tech-card">
+
+        <h2>Tech Stack</h2>
+
+        <i class="fa-brands fa-html5"> HTML5</i>
+        <i class="fa-brands fa-css3-alt"> CSS3</i>
+        <i class="fa-brands fa-js">JavaScript</i>
+        <i class="fa-brands fa-java">  Java</i>
+
+    </section>
+
+</section>
+ </main>
 <footer>
     <div class="footer-container">
 
-        <div class="footer-section">
-            <img src="images/logo.png" alt="footer logo" class="footer-logo">
-        </div>
-
-        <div class="footer-section">
+        <img src="images/logo.png" alt="footer logo" class="footer-logo">
+       
+        <address class="footer-section">
             <h3>Contact</h3>
-            <p>Mobile ☎:  +27 79 111 1111</p>
+            <p>Mobile ☎: +27 79 111 1111</p>
             <p>
                 ✉: 
                 <a href="mailto:mmasellok2@gmail.com">
                     mmasellok2@gmail.com
                 </a>
             </p>
-        </div>
+        </address>
 
-        <div class="footer-section">
-            <h3>Connect</h3>
-
-            <div class="footer-social-icons">
-                <a href="https://facebook.com" target="_blank">
+        <section class="footer-section">
+           
+            <nav class="footer-social-icons">
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook">
                     <i class="fa-brands fa-facebook"></i>
                 </a>
-
-                <a href="https://instagram.com" target="_blank">
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
-
-                <a href="https://linkedin.com" target="_blank">
+                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
                     <i class="fa-brands fa-linkedin"></i> 
                 </a>
-
-                <a href="https://github.com" target="_blank">
-                <i class="fa-brands fa-github"></i>
+                <a href="https://github.com" target="_blank" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
                 </a>
-            </div>
-        </div>
-
+            </nav>
+        </section>
     </div>
 
-    <div class="footer-bottom">
-        <p>&copy; 2026 Mmasello Manabile. All Rights Reserved.</p>
-    </div>
+ <section class="footer-bottom">
+    <p>&copy; 2026 Mmasello Manabile. All Rights Reserved.</p>
+ </section>
 </footer>
-
 </body>
 </html>

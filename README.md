@@ -180,6 +180,14 @@ The form uses HTML validation to ensure data quality:
 -Accepts numeric values only.
 
 
+## Reflection
+
+Two debugging challenges stood out during this project:
+
+**CSS validation error from an invalid transform value.** The `nav :hover` rule included `transform: matrix(-10)`, which isn't a valid matrix (a `matrix()` transform requires six comma-separated values, not one). This single invalid property failed the entire W3C CSS validation pass. I found it by reading through the validator's error output line by line rather than assuming the error was somewhere more complex, and removed the property. While fixing it, I also noticed the same rule was un-scoped (`nav :hover` instead of `nav a:hover`), which meant hovering anywhere in the nav bar — not just the links — triggered the colour change, so I scoped it to links only.
+
+**Missing closing tag breaking page structure.** The `<footer>` on `contact.html` was never closed with `</footer>` before `</body>`. Because the browser silently corrects unclosed tags, the page still rendered visually, which meant the bug stayed invisible during normal testing and only surfaced when I ran the HTML validator. This taught me to validate structure with a tool rather than relying on the rendered page looking correct, since a visually fine page can still contain invalid, unclosed markup underneath.
+
 ## Technologies Used
 
 - HTML5

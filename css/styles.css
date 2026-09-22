@@ -91,9 +91,29 @@ nav ul li a {
 nav h1{
     color: rgb(24, 17, 26);
 }
-nav :hover{
+nav a:hover{
     color: #1572B6;
-    transform: matrix(-10);
+}
+
+/* ===============================
+   PAGE HEADER (nav + page title)
+================================ */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(243, 240, 228);
+    padding: 20px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.page-header nav {
+    position: static;
+    padding: 0;
+    box-shadow: none;
 }
 
 .social-icons {
@@ -320,7 +340,7 @@ article {
     transition: transform 0.3s;
     background: rgb(243, 240, 228);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 15%;
+    margin-top: 30px;
 }
 
 article:hover {
@@ -460,7 +480,7 @@ form button {
 }
 
 form button:hover {
-    background: #00bcd4;
+    background: #006978;
 }
 
 
@@ -631,16 +651,8 @@ address {
    GLOBAL RULES
 ================================ */
 
-* {
-    box-sizing: border-box;
-}
-
 img {
     max-width: 100%;
-}
-
-body {
-    overflow-x: hidden;
 }
 
 /* Footer positioning */
@@ -676,18 +688,6 @@ main {
         flex-direction: column;
         align-items: center;
     }
-
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-left-column,
-    .hero-right-column,
-    .hero-image {
-        width: 100%;
-    }
-
 
     .hero {
         flex-direction: column;

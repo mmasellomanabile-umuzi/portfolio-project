@@ -4,22 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
+    <meta name="description" content="Get in touch with Mmasello Manabile via the contact form, phone, email, or the office location map.">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
+    <header class="page-header">
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="contact.html">Contact</a></li>
-            </ul>
-
-                <h1>Get in Touch</h1>
+        </ul>
     </nav>
+
+    <h1 class="page-title">Get in touch</h1>
+</header>
 
     <section class="contact-page">
          <h2 class="hidden">Contact</h2>
@@ -45,13 +48,13 @@
           <form action="submit.html" method="GET">
             <h2>Enter your info</h2>
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Ngoako Rams" pattern="[A-Za-z ]+" >
+            <input type="text" id="name" name="name" placeholder="Your name. E.g. Ngoako Rams" pattern="[A-Za-z ]+" >
             
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="NgoaksR@umuzi.com" required>
+            <input type="email" id="email" name="email" placeholder="Your email adress. E.g. NgoaksR@umuzi.com" required>
             
             <label for="phone">Contact Number:</label>
-            <input type="tel" id="phone" name="phone" placeholder="051 234 5678" minlength="10" maxlength="10" pattern="[0-9]+">
+            <input type="tel" id="phone" name="phone" placeholder="E.g. 051 234 5678" minlength="10" maxlength="10" pattern="[0-9]+">
                    
             <label>Preferred Contact Method:</label>
             
@@ -116,6 +119,7 @@
          <h2 class="hidden">bottom</h2>
         <p>&copy; 2026 Mmasello Manabile. All Rights Reserved.</p>
     </section>
+</footer>
 
 </body>
 </html>

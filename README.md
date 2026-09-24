@@ -2,261 +2,67 @@
 
 ## Overview
 
-This project is a multi-page portfolio website created as part of a capstone assessment focused on HTML5, CSS3, accessibility, semantic web development, responsive design, debugging, and code quality improvement.
+A multi-page portfolio for an aspiring Software Developer, built with HTML5 and CSS3 only. It completes an unfinished starter codebase for the capstone: debugging errors, adding missing features and improving accessibility, design and code quality. Pages: Home, About, Projects, Contact, plus a form confirmation page.
 
-The original starter code provided was incomplete and contained multiple HTML and CSS issues. The purpose of this project was to identify those issues, correct errors, improve accessibility, implement missing features, and transform the website into a professional portfolio site.
+## Issues Found
 
-The completed website showcases my background, skills, projects, and contact information as an aspiring Software Developer.
-
-## Project Purpose
-
-The website serves as a personal portfolio designed to:
-
-- Introduce visitors to my professional profile
-- Showcase my technical skills and experience
-- Highlight selected projects
-- Provide multiple ways to contact me
-- Demonstrate best practices in HTML and CSS development
-
-
-## Issues Found in the Starter Code
-
-The starter code contained numerous HTML and CSS issues, including:
-
-### HTML Issues
-
-- Missing semantic HTML elements
-- Missing navigation links
-- Missing image alt attributes
-- Missing table structure on the About page
-- Incomplete contact form
-- Missing form labels
-- Accessibility concerns
-- Structural inconsistencies between pages
-
-### CSS Issues
-
-- Limited selector usage
-- Missing navigation styling
-- Missing table styling
-- Missing form styling
-- Poor spacing and alignment
-- Lack of hover states
-- Limited box-model implementation
-- Inconsistent layout structure
-- Weak colour and typography hierarchy
+- **HTML:** missing `lang` attribute, no semantic `<header>`, `<nav>`, `<main>` or `<footer>`, no navigation links, missing image `alt` text, no data table, a form without labels, few input types and no validation attributes.
+- **CSS:** few selector types, no navigation, table or form styling, no pseudo-classes, weak box-model use, poor colour contrast, a left-aligned footer, and HTML tags pasted into the stylesheet.
 
 ## Fixes Implemented
 
-The following improvements were made throughout the project:
+- Added semantic landmarks and one consistent header, navigation and footer on every page.
+- Added descriptive `alt` text to all images and a skills table on the About page.
+- Rebuilt the contact form with labels, a `fieldset`, six input types plus a dropdown, and HTML5 validation.
+- Added navigation, table and form styling, hover, focus and active states, a CSS-only typing animation and responsive layouts.
+- Fixed contrast, footer alignment, indentation, naming and redundant code, and added comments and custom properties.
 
-### HTML Improvements
+## HTML Structure
 
-- Added semantic HTML elements including:
-  - `<nav>`
-  - `<main>`
-  - `<section>`
-  - `<article>`
-  - `<footer>`
+Every page uses `<header>` with `<nav>`, `<main>` (holding `<section>` and `<article>` blocks) and `<footer>`. The only non-semantic `<div>` is the footer layout wrapper. Each page has one `<h1>`, headings follow in order, and the current page link carries `aria-current="page"`.
 
-- Added navigation menus to all pages
-- Added descriptive alt text to images
-- Created a skills table with proper table structure
-- Improved page structure and consistency
-- Added a fully functional contact form
-- Added HTML5 validation attributes
-- Connected all pages through internal links
+## CSS Approach
 
-### CSS Improvements
-
-- Added navigation styling and hover effects
-- Added responsive layouts using Flexbox
-- Implemented multiple selector types
-- Added form styling
-- Added table styling
-- Improved spacing and alignment
-- Improved visual hierarchy
-- Added hover and focus interactions
-- Added responsive design adjustments
-- Improved overall presentation and user experience
-
-
-## HTML Structure and Semantic Design
-
-The website uses semantic HTML5 elements to improve accessibility, readability, and maintainability. This semantic structure and design improves document organization and supports assistive technologies.
-
-### Structure Used
-
-- `<nav>` for navigation
-- `<main>` for page content
-- `<section>` for content grouping
-- `<article>` for independent content blocks
-- `<footer>` for site footer information
-
-
-## CSS Styling Approach
-
-The design focuses on a clean, professional appearance while demonstrating CSS fundamentals.
-
-### Selector Types Used
-
-- Element selectors
-- Class selectors
-- ID selectors
-- Descendant selectors
-- Pseudo-class selectors
-- Attribute selectors
-- Combination selectors
-
-### Styling Features
-
-- Flexbox layouts
-- Responsive adjustments using media queries
-- Box model implementation
-- Hover effects
-- Focus states
-- Gradient text styling
-- Custom button styling
-- Responsive images
-- Table formatting
-
+`css/styles.css` is split into numbered, commented sections and stores the palette in custom properties. Selectors used: element, class, ID (`#contact-info`), descendant, child (`.card-grid > article`), attribute (`input[type="radio"]`) and pseudo-class (`:hover`, `:focus`, `:active`, `:nth-child`). Layout uses Flexbox and Grid, with media queries at 1200, 1100 and 768 px.
 
 ## Accessibility Improvements
 
-Several accessibility enhancements were made:
+- Text colours meet the 4.5:1 contrast ratio.
+- Every form control has a label, and radio buttons sit in a `fieldset` with a `legend`.
+- Visible `:focus` outlines, image `alt` text, an iframe `title` and `aria-label`s on icon-only links.
+- The typing animation stops for visitors who prefer reduced motion.
 
-- Added descriptive alt text to all images
-- Added labels to all form controls
-- Added HTML5 form validation
-- Included hidden headings where appropriate
-- Improved semantic page structure
-- Added keyboard-friendly navigation states with ":focus"
-- Improved readability and layout consistency
+## How to View
+
+1. Clone the repository: `git clone https://github.com/mmasellomanabile-umuzi/portfolio-project.git`
+2. Open `index.html` in Chrome or Edge and use the navigation links.
+3. Or visit the published site: https://mmasellomanabile-umuzi.github.io/portfolio-project/
+
+## Screenshots
+
+all screenshots are located in folder -Screenshots/After(FinalProject)/Before(StarterCode)
 
 
-## Pages Included
+| Home | About |
+|---|---|
+| ![Home page](screenshots/homepage.png) | ![About page](screenshots/about.png) |
 
-### Home Page
+| Projects | Contact |
+|---|---|
+| ![Projects page](screenshots/projects.png) | ![Contact page](screenshots/contact.png) |
 
-- Introduction section
-- Hero image
-- Social media links
-- Call-to-action section, with button link to about.html
+| Form | Table |
+|---|---|
+| ![Contact form](screenshots/form.png) | ![Skills table](screenshots/table.png) |
 
-### About Page
+| Navigation hover | W3C validation |
+|---|---|
+| ![Navigation hover](screenshots/nav-hover.png) | ![W3C results](screenshots/w3c-validation.png) |
 
-- Personal background
-- Skills table
-- Professional image
-- Contact link
-
-### Projects Page
-
-- Project showcase cards
-- Project images
-- GitHub profile link
-
-### Contact Page
-
-- Contact details
-- Embedded Google Maps location
-- Contact form
-- Form validation
-
-#### Form Validation
-
-The form uses HTML validation to ensure data quality:
-
-##### Name Validation
-
--Accepts letters and spaces only.
-
-##### Email Validation
-
--Uses built-in HTML5 validation.
-
-##### Contact Number Validation
-
--Accepts numeric values only.
-
+![Before and after](screenshots/before-after.png)
 
 ## Reflection
 
-Two debugging challenges stood out during this project:
+**Invalid CSS value.** A `nav :hover` rule contained `transform: matrix(-10)`, which is invalid because `matrix()` needs six values. Reading the W3C CSS validator output line by line led me straight to it. I removed it and scoped the rule to `nav a:hover`, so only the links change colour.
 
-**CSS validation error from an invalid transform value.** The `nav :hover` rule included `transform: matrix(-10)`, which isn't a valid matrix (a `matrix()` transform requires six comma-separated values, not one). This single invalid property failed the entire W3C CSS validation pass. I found it by reading through the validator's error output line by line rather than assuming the error was somewhere more complex, and removed the property. While fixing it, I also noticed the same rule was un-scoped (`nav :hover` instead of `nav a:hover`), which meant hovering anywhere in the nav bar — not just the links — triggered the colour change, so I scoped it to links only.
-
-**Missing closing tag breaking page structure.** The `<footer>` on `contact.html` was never closed with `</footer>` before `</body>`. Because the browser silently corrects unclosed tags, the page still rendered visually, which meant the bug stayed invisible during normal testing and only surfaced when I ran the HTML validator. This taught me to validate structure with a tool rather than relying on the rendered page looking correct, since a visually fine page can still contain invalid, unclosed markup underneath.
-
-## Technologies Used
-
-- HTML5
-- CSS3
-- Font Awesome
-- Google Maps Embed
-- Git
-- GitHub
-
-## Project Structure
-
-
-portfolio-website/
-│
-├── index.html
-├── about.html
-├── projects.html
-├── contact.html
-├── submit.html
-│
-├── css/
-│   └── styles.css
-│
-├── images/
-│   ├── hero.png
-│   ├── MyPic.jpg
-│   ├── logo.png
-│   ├── project1.jpg
-│   ├── project2.jpg
-│   └── project3.jpg
-│
-├── design/
-│   ├── wireframe.pdf
-│   └── issuesIdentified.pdf
-│
-├── screenshots/
-│   ├── Before(starterCode)
-│   └── After(FinalProject)
-│
-└── README.md
-
-
-## Installation
-
-### Clone the Repository
-
-using bash use the following command: 
-
-git clone https://github.com/mmasellomanabile-umuzi/portfolio-project.git
-
-
-### Run the Project
-
-Open the project folder and launch:
-
-index.html
-- You will be then able to click between the links. 
-
-
-in any modern web browser (Google Chrome or MS Edge).
-
-### Click on below link to view published site: 
-https://mmasellomanabile-umuzi.github.io/portfolio-project/
-
-# W3C Validation:
-
-- screenshots included in the screenshots folder. 0 errors found on all pages. 
-
-
-## Author
-
-### Mmasello Manabile
+**Unclosed tag.** `contact.html` was missing its closing `</footer>`. Browsers correct this silently, so the page looked fine and only the HTML validator exposed it. I learned to validate with tools rather than trust how a page looks.

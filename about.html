@@ -1,136 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>About | Mmasello Manabile</title>
     <meta name="description" content="Meet Mmasello Manabile, a Software Developer specialising in HTML, CSS, JavaScript and Java, with a background and skills overview.">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Space+Grotesk:wght@400;600;700&display=swap">
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-     <header class="page-header">
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    <header class="page-header">
+        <nav aria-label="Main navigation">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" aria-current="page">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
 
-    <h1 class="page-title">Behind the code</h1>
-</header>
+            <ul class="social-icons" aria-label="Social media links">
+                <li>
+                    <a href="mailto:mmasellok2@gmail.com" aria-label="Email Mmasello">
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/mmasellomanabile-umuzi" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <h1 class="page-title">Behind the code</h1>
+    </header>
+
     <main>
-        <section>
-            <h2 class="hidden">About</h2>
         
-          <article id="Photo">
-             <h2>Meet Mmasello </h2>
-             <img src="images/MyPic.jpg" alt="picture of Mmasello, the developer">
-<br>
-<br>
-            <div>
-                <p><a href="contact.html">Get your tailored quote here </a></p>
-            </div>
-        </article>
+        <section class="card-grid">
+            <h2 class="hidden">About Mmasello</h2>
 
-        <article id="Background">
-            <h2>Background</h2>
-            <p> I am a dedicated Software Developer with a passion for building clean, responsive, and user-focused web applications. My expertise spans both front-end and back-end development, enabling me to create seamless digital solutions from concept to deployment. I enjoy transforming ideas into functional, visually appealing experiences using modern web technologies such as HTML, CSS, JavaScript, and Java. Committed to continuous learning and professional growth, I am always expanding my technical skills to develop innovative and high-quality software solutions. </p>
-        </article>
+            <article id="photo">
+                <h2>Meet Mmasello</h2>
+                <img src="images/MyPic.jpg" alt="Portrait photo of Mmasello Manabile, Software Developer">
+            </article>
 
-        <article>
-            <h2>Skills</h2>
-            <table>
-    <thead>
-        <tr>
-            <th>Skill</th>
-            <th>Level</th>
-            <th>Experience</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>HTML</td>
-            <td>Advanced</td>
-            <td>3+ years</td>
-        </tr>
-        <tr>
-            <td>CSS</td>
-            <td>Intermediate</td>
-            <td>2+ years</td>
-        </tr>
-        <tr>
-            <td>JavaScript</td>
-            <td>Intermediate</td>
-            <td>2+ years</td>
-        </tr>
+            <article id="background">
+                <h2>Background</h2>
+                <p>
+                    I am a dedicated Software Developer with a passion for building clean,
+                    responsive, and user-focused web applications. My expertise spans both
+                    front-end and back-end development, enabling me to create seamless digital
+                    solutions from concept to deployment. I enjoy transforming ideas into
+                    functional, visually appealing experiences using modern web technologies
+                    such as HTML, CSS, JavaScript, and Java. Committed to continuous learning
+                    and professional growth, I am always expanding my technical skills to
+                    develop innovative and high-quality software solutions.
+                </p>
+            </article>
 
-        <tr>
-            <td>Java</td>
-            <td>Intermediate</td>
-            <td>2+ years</td>
-        </tr>
-
-        <tr>
-            <td>Github</td>
-            <td>Intermediate</td>
-            <td>1+ years</td>
-        </tr>
-      </tbody>
-    </table>
-   </article>
-
-</section>
-</main>
-    <br><br><br>
-  
- 
-   <footer>
-    <div class="footer-container">
-
-        <img src="images/logo.png" alt="footer logo" class="footer-logo">
-
-       
-        <address class="footer-section">
-            <h3>Contact</h3>
-            <p>Mobile ☎: +27 79 111 1111</p>
-            <p>
-                ✉: 
-                <a href="mailto:mmasellok2@gmail.com">
-                    mmasellok2@gmail.com
-                </a>
-            </p>
-        </address>
-
-        <section class="footer-section">
-           
-            <section class="footer-social-icons">
-                <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
-                <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://github.com/mmasellomanabile-umuzi" target="_blank" aria-label="LinkedIn">
-                    <i class="fa-brands fa-linkedin"></i> 
-                </a>
-                <a href="https://github.com" target="_blank" aria-label="GitHub">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-            </section>
+            <article id="skills">
+                <h2>Skills</h2>
+                <table>
+                    <caption>Level of experience</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Skill</th>
+                            <th scope="col">Level</th>
+                            <th scope="col">Experience</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>HTML</td>
+                            <td>Advanced</td>
+                            <td>3+ years</td>
+                        </tr>
+                        <tr>
+                            <td>CSS</td>
+                            <td>Intermediate</td>
+                            <td>2+ years</td>
+                        </tr>
+                        <tr>
+                            <td>JavaScript</td>
+                            <td>Intermediate</td>
+                            <td>2+ years</td>
+                        </tr>
+                        <tr>
+                            <td>Java</td>
+                            <td>Intermediate</td>
+                            <td>2+ years</td>
+                        </tr>
+                        <tr>
+                            <td>GitHub</td>
+                            <td>Intermediate</td>
+                            <td>1+ years</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
         </section>
 
-    </div>
+        <p class="cta-link">
+            <a href="contact.html">Get your tailored quote here</a>
+        </p>
+    </main>
 
-    <section class="footer-bottom">
-         <h2 class="hidden">bottom</h2>
-        <p>&copy; 2026 Mmasello Manabile. All Rights Reserved.</p>
-    </section>
-</footer>
+    <footer>
+        <div class="footer-container">
+            <img src="images/logo.png" alt="Mmasello Manabile portfolio logo" class="footer-logo">
 
+            <address class="footer-contact">
+                <p><span aria-hidden="true">&#9742;</span> Mobile: <a href="tel:+27791230177">+27 79 123 0177</a></p>
+                <p><span aria-hidden="true">&#9993;</span> E-mail: <a href="mailto:mmasellok2@gmail.com">mmasellok2@gmail.com</a></p>
+            </address>
 
-  </body>
+            <ul class="footer-social-icons" aria-label="Social media links">
+                <li>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/mmasellomanabile-umuzi" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <p class="footer-bottom">&copy; 2026 Mmasello Manabile. All Rights Reserved.</p>
+    </footer>
+</body>
+
 </html>

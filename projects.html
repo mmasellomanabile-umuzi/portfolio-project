@@ -1,101 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
+    <title>Projects | Mmasello Manabile</title>
     <meta name="description" content="A selection of web development projects by Mmasello Manabile, including a local church website, a task manager app, and an e-commerce site.">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Space+Grotesk:wght@400;600;700&display=swap">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
     <header class="page-header">
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+        <nav aria-label="Main navigation">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html" aria-current="page">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
 
-    <h1 class="page-title">Projects</h1>
-</header>
+            <ul class="social-icons" aria-label="Social media links">
+                <li>
+                    <a href="mailto:mmasellok2@gmail.com" aria-label="Email Mmasello">
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/mmasellomanabile-umuzi" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <h1 class="page-title">Projects</h1>
+    </header>
 
     <main>
-     <section>
-         <h2 class="hidden">Contact</h2>
-        <article>
-            <h2>Project 1</h2>
-            <img src="images/project1.jpg" alt="Website project">
-            <p>A responsive website built with HTML, CSS and JavaScript for a local church.</p>
-        </article>    
+        <!-- Three project cards -->
+        <section class="card-grid">
+            <h2 class="hidden">Selected projects</h2>
 
-        <article>
-            <h2>Project 2</h2>
-            <img src="images/project2.jpg" alt="Task manager app">
-            <p>A task manager mobile app</p>
-        </article>    
-            
-        <article>
-            <h2>Project 3</h2>
-            <img src="images/project3.jpg" alt="E-commerce site example">
-            <p>An e-commerce site with modern design & Java back-end.</p>
-        </article>
+            <article id="project-church">
+                <h2>Project 1</h2>
+                <img src="images/project1.jpg" alt="Screenshot of the responsive church website project">
+                <p>A responsive website built with HTML, CSS and JavaScript for a local church.</p>
+            </article>
 
-        <br><br><br>
-    <div>
-        <p><a href="https://github.com/mmasellomanabile-umuzi/portfolio-project" target="_blank">View more on my Github profile</a></p>
-    </div>
+            <article id="project-task-manager">
+                <h2>Project 2</h2>
+                <img src="images/project2.jpg" alt="Screenshot of the task manager mobile app">
+                <p>A task manager mobile app.</p>
+            </article>
 
- </section>
-</main>
-<br><br><br>
- 
-   <footer>
-    <div class="footer-container">
-
-        <img src="images/logo.png" alt="footer logo" class="footer-logo">
-
-       
-        <address class="footer-section">
-            <h3>Contact</h3>
-            <p>Mobile ☎: +27 79 111 1111</p>
-            <p>
-                ✉: 
-                <a href="mailto:mmasellok2@gmail.com">
-                    mmasellok2@gmail.com
-                </a>
-            </p>
-        </address>
-
-        <section class="footer-section">
-           
-            <section class="footer-social-icons">
-                <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
-                <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
-                    <i class="fa-brands fa-linkedin"></i> 
-                </a>
-                <a href="https://github.com/mmasellomanabile-umuzi/portfolio-project" target="_blank" aria-label="GitHub">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-            </section>
+            <article id="project-ecommerce">
+                <h2>Project 3</h2>
+                <img src="images/project3.jpg" alt="Screenshot of the e-commerce website project">
+                <p>An e-commerce site with modern design &amp; Java back-end.</p>
+            </article>
         </section>
 
-    </div>
+        <p class="cta-link">
+            <a href="https://github.com/mmasellomanabile-umuzi/portfolio-project" target="_blank" rel="noopener noreferrer">View more on my GitHub profile</a>
+        </p>
+    </main>
 
-    <section class="footer-bottom">
-         <h2 class="hidden">bottom</h2>
-        <p>&copy; 2026 Mmasello Manabile. All Rights Reserved.</p>
-    </section>
-</footer>
+    <footer>
+        <div class="footer-container">
+            <img src="images/logo.png" alt="Mmasello Manabile portfolio logo" class="footer-logo">
 
+            <address class="footer-contact">
+                <p><span aria-hidden="true">&#9742;</span> Mobile: <a href="tel:+27791230177">+27 79 123 0177</a></p>
+                <p><span aria-hidden="true">&#9993;</span> E-mail: <a href="mailto:mmasellok2@gmail.com">mmasellok2@gmail.com</a></p>
+            </address>
+
+            <ul class="footer-social-icons" aria-label="Social media links">
+                <li>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/mmasellomanabile-umuzi" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <p class="footer-bottom">&copy; 2026 Mmasello Manabile. All Rights Reserved.</p>
+    </footer>
 </body>
+
 </html>

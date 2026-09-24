@@ -1,125 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Contact | Mmasello Manabile</title>
     <meta name="description" content="Get in touch with Mmasello Manabile via the contact form, phone, email, or the office location map.">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Space+Grotesk:wght@400;600;700&display=swap">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
     <header class="page-header">
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+        <nav aria-label="Main navigation">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
 
-    <h1 class="page-title">Get in touch</h1>
-</header>
+            <ul class="social-icons" aria-label="Social media links">
+                <li>
+                    <a href="mailto:mmasellok2@gmail.com" aria-label="Email Mmasello">
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/mmasellomanabile-umuzi" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
-    <section class="contact-page">
-         <h2 class="hidden">Contact</h2>
-          <article id="contact-info">
-            <h2>Contact Us</h2>
-            <h3>Adress &#8962;: </h3> 
+        <h1 class="page-title">Get in touch</h1>
+    </header>
+
+    <main>
+   
+        <section class="contact-page">
+            <h2 class="hidden">Contact details and enquiry form</h2>
+
+            <article id="contact-info">
+                <h2>Contact details</h2>
+
+                <h3>Address</h3>
                 <p>Infinity Business Park, Block D, 4 Pieter Wenning Rd, Fourways, Johannesburg, 2191</p>
-        
-                <h3>Mobile ☎: </h3>
-                <p> <a href="tel:+27791111111"> +27 79 111 1111</a></p>
-        
-                <h3>E-mail ✉: </h3>
-                <p><a href="mailto:mmasellok2@gmail.com">
-                    mmasellok2@gmail.com</a>
-                </p>    
-            <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3585.9353513952315!2d28.00875757419219!3d-26.002935055804986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9576ce93752243%3A0xc4c0c64a3492f5df!2sInfinity%20Business%20Park!5e0!3m2!1sen!2sza!4v1788596105613!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
-            </iframe>   
 
-        </article> 
-  
-        <article id="form">
-          <form action="submit.html" method="GET">
-            <h2>Enter your info</h2>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Your name. E.g. Ngoako Rams" pattern="[A-Za-z ]+" >
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Your email adress. E.g. NgoaksR@umuzi.com" required>
-            
-            <label for="phone">Contact Number:</label>
-            <input type="tel" id="phone" name="phone" placeholder="E.g. 051 234 5678" minlength="10" maxlength="10" pattern="[0-9]+">
-                   
-            <label>Preferred Contact Method:</label>
-            
-            <div class="radio-group">
-                <label for="contact-email">Email</label>
-                <input type="radio" id="contact-email" name="contact-method" value="email">
-            
-                <label for="contact-phone">Phone</label>
-                <input type="radio" id="contact-phone" name="contact-method" value="phone">
-            </div> 
-            <br>
-            <label for="message">Message</label>
-            <textarea id="message" name="message"  placeholder="How can I make your day?"></textarea>
-            
-            <div class="checkbox-group">
-                <label for="marketing">Opt me in for offers!</label>
-                <input type="checkbox" id="marketing" name="marketing" >
-            </div>
+                <h3>Mobile</h3>
+                <p><a href="tel:+27791230177">+27 79 123 0177</a></p>
 
-            <button type="submit"> Send </button>
-        </form>
-      </article>  
-     </section>  
-    
-<footer>
-    <div class="footer-container">
-      <img src="images/logo.png" alt="footer logo" class="footer-logo">
-      
-        <address class="footer-section">
-            <h3>Contact</h3>
-            <p>Mobile ☎: +27 79 111 1111</p>
-            <p>
-                ✉: 
-                <a href="mailto:mmasellok2@gmail.com">
-                    mmasellok2@gmail.com
-                </a>
-            </p>
-        </address>
+                <h3>E-mail</h3>
+                <p><a href="mailto:mmasellok2@gmail.com">mmasellok2@gmail.com</a></p>
 
-        <section class="footer-section">
-             <h2 class="hidden">bottom</h2>
-           
-            <section class="footer-social-icons">
-                <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
-                <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
-                    <i class="fa-brands fa-linkedin"></i> 
-                </a>
-                <a href="https://github.com/mmasellomanabile-umuzi" target="_blank" aria-label="GitHub">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-            </section>
+                <iframe
+                    title="Map showing Infinity Business Park, Fourways, Johannesburg"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3585.9353513952315!2d28.00875757419219!3d-26.002935055804986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9576ce93752243%3A0xc4c0c64a3492f5df!2sInfinity%20Business%20Park!5e0!3m2!1sen!2sza!4v1788596105613!5m2!1sen!2sza"
+                    width="600" height="450" allowfullscreen loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin">
+                </iframe>
+            </article>
+
+            <article id="contact-form">
+                <h2>Send a message</h2>
+
+                <form action="submit.html" method="get">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="E.g. Ngoako Shalang"
+                        autocomplete="name" pattern="[A-Za-z ]+" minlength="2"
+                        title="Letters and spaces only" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="E.g. ngoako.shalang@umuzi.com"
+                        autocomplete="email" required>
+
+                    <label for="phone">Contact number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="E.g. 0712345678"
+                        autocomplete="tel" inputmode="numeric" pattern="[0-9]{10}"
+                        minlength="10" maxlength="10" title="10 digits, numbers only">
+
+                    <label for="enquiry">Reason for contact:</label>
+                    <select id="enquiry" name="enquiry" required>
+                        <option value="">Choose an option</option>
+                        <option value="website">New website project</option>
+                        <option value="job">Job opportunity</option>
+                        <option value="collaboration">Collaboration</option>
+                        <option value="other">Something else</option>
+                    </select>
+
+                    <fieldset>
+                        <legend>Preferred contact method</legend>
+                        <p class="radio-group">
+                            <input type="radio" id="contact-email" name="contact-method" value="email">
+                            <label for="contact-email">Email</label>
+
+                            <input type="radio" id="contact-phone" name="contact-method" value="phone">
+                            <label for="contact-phone">Phone</label>
+                        </p>
+                    </fieldset>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" minlength="10" maxlength="500"
+                        placeholder="How can I make your day?" required></textarea>
+
+                    <p class="checkbox-group">
+                        <input type="checkbox" id="marketing" name="marketing">
+                        <label for="marketing">Opt me in for offers!</label>
+                    </p>
+
+                    <button class="cta-link" type="submit">Send message</button>
+                </form>
+            </article>
         </section>
+    </main>
 
-    </div>
+    <footer>
+        <div class="footer-container">
+            <img src="images/logo.png" alt="Mmasello Manabile portfolio logo" class="footer-logo">
 
-    <section class="footer-bottom">
-         <h2 class="hidden">bottom</h2>
-        <p>&copy; 2026 Mmasello Manabile. All Rights Reserved.</p>
-    </section>
-</footer>
+            <address class="footer-contact">
+                <p><span aria-hidden="true">&#9742;</span> Mobile: <a href="tel:+27791230177">+27 79 123 0177</a></p>
+                <p><span aria-hidden="true">&#9993;</span> E-mail: <a href="mailto:mmasellok2@gmail.com">mmasellok2@gmail.com</a></p>
+            </address>
 
+            <ul class="footer-social-icons" aria-label="Social media links">
+                <li>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/mmasellomanabile-umuzi" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <p class="footer-bottom">&copy; 2026 Mmasello Manabile. All Rights Reserved.</p>
+    </footer>
 </body>
+
 </html>

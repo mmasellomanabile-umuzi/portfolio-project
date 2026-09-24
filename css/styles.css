@@ -1,235 +1,296 @@
-/* ===============================
-   RESET
-================================ */
+/* ==========================================================
+   PORTFOLIO WEBSITE - MAIN STYLESHEET
+   Sections:
+    1. Reset               8. Contact page
+    2. Custom properties   9. Form
+    3. Global styles      10. Table
+    4. Utilities          11. Confirmation page
+    5. Header and nav     12. Footer
+    6. Home page          13. Animation
+    7. Cards and buttons  14. Responsive design
+   Naming: lowercase kebab-case for classes and IDs.
+   ========================================================== */
+
+
+/* ==========================================================
+   1. RESET
+   ========================================================== */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ===============================
-   BODY
-================================ */
-body {
-    font-family: Arial, sans-serif;
-    background-color: rgb(243, 240, 228);
-    color: #333;
-    line-height: 1.6;
-    padding-top: 10px;
-    margin: 0%;
-    overflow-x: hidden;
+
+/* ==========================================================
+   2. CUSTOM PROPERTIES (colour palette)
+   Every text colour below meets the 4.5:1 contrast ratio
+   on the cream background (#f3f0e4).
+   ========================================================== */
+
+:root {
+    --color-bg: #f3f0e4;
+    --color-text: #333333;
+    --color-ink: #18111a;
+    --color-muted: #514f4f;
+    --color-accent: #ad0588;
+    --color-plum: #6b4e71;
+    --color-link-hover: #0b4f8a;
+    --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+
+
+/* ==========================================================
+   3. GLOBAL STYLES
+   ========================================================== */
 
 html {
     scroll-behavior: smooth;
+    height: 100%;
 }
 
-/* ===============================
-   HEADER
-================================ */
-.header {
+body {
+    min-height: 100vh;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #333;
-    color: white;
-    padding: 15px 20px;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-.header h1 {
-    margin: 0;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+main {
+    flex: 1;
 }
 
-.header img {
-    width: 120px;
+img {
+    max-width: 100%;
     height: auto;
 }
 
-.name-container {
-    display: flex;
-    flex-direction: column;
-    line-height: 1;
+/* Visible keyboard focus on every link */
+a:focus {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
 }
 
-/* ===============================
-   NAVIGATION
-================================ */
-nav {
-    background: rgb(243, 240, 228);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1)
-}
 
-nav ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
+/* ==========================================================
+   4. UTILITIES
+   ========================================================== */
+
+/* Hides a heading visually but keeps it for screen readers */
+.hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
     padding: 0;
-    gap: 20px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
-nav ul li {
-    margin: 0;
-}
 
-nav ul li a {
-    color: rgb(24, 17, 26);
-    text-decoration: underline;
-    text-decoration-style: solid;
-    text-decoration-thickness: 2px;
-    font-weight: bold;
-}
+/* ==========================================================
+   5. HEADER AND NAVIGATION
+   ========================================================== */
 
-nav h1{
-    color: rgb(24, 17, 26);
-}
-nav a:hover{
-    color: #1572B6;
-}
-
-/* ===============================
-   PAGE HEADER (nav + page title)
-================================ */
 .page-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgb(243, 240, 228);
-    padding: 20px 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding: 10px 20px;
+    background: var(--color-bg);
 }
 
-.page-header nav {
-    position: static;
-    padding: 0;
-    box-shadow: none;
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    background: var(--color-bg);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--color-ink);
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    transition: color 0.3s ease;
+}
+
+/* Attribute selector: highlights the page the visitor is on */
+.nav-links a[aria-current="page"] {
+    color: var(--color-accent);
+}
+
+.nav-links a:hover {
+    color: var(--color-link-hover);
+}
+
+.nav-links a:active {
+    color: var(--color-plum);
 }
 
 .social-icons {
     display: flex;
+    align-items: center;
     gap: 15px;
+    margin-left: auto;
+    list-style: none;
 }
 
 .social-icons a {
-    color: rgb(24, 17, 26);
+    color: var(--color-ink);
+    font-size: 1.3rem;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
-/* ===============================
-   HERO SECTION
-================================ */
 
+.social-icons a:hover {
+    color: var(--color-link-hover);
+}
+
+.page-title {
+    margin-left: auto;
+    color: var(--color-muted);
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: right;
+}
+
+
+/* ==========================================================
+   6. HOME PAGE
+   ========================================================== */
+
+/* Hero: name and tagline | portrait | job title */
 .hero {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
-    align-items: start; 
-    max-width: 1200px;
-    padding: 30px 20px; 
-    background-color: rgb(243, 240, 228);
-    margin: 20px auto;
-    text-align: center;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
     gap: 30px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 30px 20px;
+    background-color: var(--color-bg);
+    text-align: center;
+    box-shadow: var(--shadow-card);
     transition: transform 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1)
 }
 
 .hero:hover {
-    transform: translate(-10px);
+    transform: translateX(-10px);
 }
 
 .hero-left-column {
+    margin-top: 5px;
     text-align: left;
-    margin-top: 5px; 
-    color: #514f4f;
+    color: var(--color-muted);
 }
 
-.hero-left {
-    font-size: 4.0rem;
+.hero-name {
+    margin-bottom: 15px;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 4rem;
     font-weight: bold;
-    color: #514f4f;
     line-height: 1.2;
-    margin: 0 0 15px 0;
-    font-family: 'Space Grotesk', sans-serif;
+    color: var(--color-muted);
 }
 
-#typing-text {
-    font-size: 1.5rem;
-    background: linear-gradient(90deg, #C67B88, #6B4E71);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+/* Block display puts first and last name on separate lines */
+.hero-first,
+.hero-last {
+    display: block;
+}
+
+.hero-first {
+    font-family: "JetBrains Mono", monospace;
+}
+
+.hero-last {
+    color: var(--color-accent);
+}
+
+/* Typing effect: the text is revealed by growing the width */
+.typing-text {
+    box-sizing: content-box;
+    width: 33ch;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 1.1rem;
     font-weight: 800;
     line-height: 1.5;
-    margin: 0;
-    min-height: 50px;
-    font-family: 'JetBrains Mono', monospace;
+    border-right: 3px solid var(--color-accent);
+    background: linear-gradient(90deg, var(--color-accent), var(--color-plum));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: typing 6s steps(33, end) infinite, blink-caret 0.8s step-end infinite;
 }
 
 .hero-image {
     display: flex;
     justify-content: center;
     align-items: center;
-    align-self: end; 
-    transition: transform 0.3s ease;
+    align-self: end;
 }
 
 .hero-image img {
     width: 100%;
-    max-width: 360px; 
-    height: auto;
+    max-width: 360px;
     object-fit: contain;
     transition: transform 0.3s ease;
 }
 
 .hero-image img:hover {
-    transform: translate(-10px);
+    transform: translateX(-10px);
 }
 
-
 .hero-right-column {
-    text-align: left;
-    margin-top: 10px; 
-    flex: 3;
     display: flex;
     flex-direction: column;
     gap: 15px;
-}
-
-.hero-icon {
-color: #ad0588;
-}
-
-.hero-right {
-color: #514f4f;
-font-family: 'JetBrains Mono', monospace;
-margin-top: 2px;
+    margin-top: 10px;
+    text-align: left;
 }
 
 .hero-title {
-    font-size: 3.0rem;
+    font-size: 3rem;
+}
+
+.hero-accent {
+    color: var(--color-accent);
+}
+
+.hero-text {
+    font-family: "JetBrains Mono", monospace;
+    color: var(--color-muted);
 }
 
 .hero-desc {
+    font-family: "JetBrains Mono", monospace;
     font-size: 1.5rem;
-    color:  #6B4E71;
     line-height: 1.4;
-    margin: 0;
-    font-family: 'JetBrains Mono', monospace;
+    color: var(--color-plum);
 }
 
-/* ===============================
-   ABOUT SECTION
-================================ */
-
+/* Introduction card and tech stack card */
 .about-section {
     display: flex;
     gap: 30px;
@@ -239,68 +300,59 @@ margin-top: 2px;
 
 .intro-card,
 .tech-card {
-    background-color: rgb(243, 240, 228);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     padding: 30px;
+    background-color: var(--color-bg);
+    box-shadow: var(--shadow-card);
 }
 
-/* About Card */
 .intro-card {
-    flex: 3;
     display: flex;
+    flex: 3;
     flex-direction: column;
     gap: 15px;
     transition: transform 0.3s ease;
 }
 
 .intro-card:hover {
-    transform: translate(-10px);
+    transform: translateX(-10px);
+}
+
+.intro-card h2,
+.tech-card h2 {
+    color: var(--color-accent);
 }
 
 .intro-card h2 {
     margin-bottom: 20px;
-    color: #ad0588;
-    align-items: center;
 }
 
 .intro-card p {
-    font-family: 'JetBrains Mono', monospace;
-    text-align: left;
+    font-family: "JetBrains Mono", monospace;
     line-height: 1.8;
-    color: #333;
+    text-align: left;
 }
 
-.project-link {
-    display: inline-block;
-    margin-top: 20px;
-    text-decoration: none;
-    font-weight: bold;
-    color: #ad0588;
-    font-family: 'JetBrains Mono', monospace;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.project-link:hover {
-    color: #C67B88;
-}
-
-/* Tech Card */
 .tech-card {
     flex: 1;
     text-align: center;
-     display: flex;
-    flex-direction: column;
-    gap: 15px;
 }
 
 .tech-card h2 {
     margin-bottom: 30px;
-    color: #ad0588;
+}
+
+.tech-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    list-style: none;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: bold;
 }
 
 .tech-card i {
+    margin-right: 10px;
     font-size: 1.5rem;
-    margin: 10px;
     transition: transform 0.3s ease;
 }
 
@@ -308,309 +360,374 @@ margin-top: 2px;
     transform: scale(1.2);
 }
 
-/* Individual icon colors */
+/* Brand colours for the tech icons */
 .fa-html5 {
-    color: #E34F26;
+    color: #e34f26;
 }
 
 .fa-css3-alt {
-    color: #1572B6;
+    color: #1572b6;
 }
 
 .fa-js {
-    color: #F7DF1E;
+    color: #7a6200;
 }
 
 .fa-java {
     color: #007396;
 }
 
-/* ===============================
-   ARTICLES / PROJECTS
-================================ */
-section {
+
+/* ==========================================================
+   7. CARDS AND BUTTONS (About and Projects pages)
+   ========================================================== */
+
+/* Three equal columns, one card per column */
+.card-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Child selector: only cards in the grid grow on hover */
+.card-grid > article:hover {
+    transform: scale(1.03);
 }
 
 article {
     padding: 20px;
+    background: var(--color-bg);
     text-align: center;
-    transition: transform 0.3s;
-    background: rgb(243, 240, 228);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 30px;
+    box-shadow: var(--shadow-card);
+    overflow-x: auto;
+    transition: transform 0.3s ease;
 }
 
-article:hover {
-    transform: scale(1.05);
+article h2 {
+    margin-bottom: 10px;
+    color: var(--color-accent);
+}
+
+article p {
+    font-family: "JetBrains Mono", monospace;
 }
 
 article img {
     width: 100%;
     height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
     margin: 10px 0;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 8px;
 }
 
-.hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
+/* Outlined call-to-action buttons */
+.project-link,
+.cta-link a {
+    display: inline-block;
+    padding: 10px 15px;
+    border: 2px solid var(--color-text);
+    border-radius: 5px;
+    color: var(--color-text);
+    font-family: "JetBrains Mono", monospace;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-article h2 {
-    color: #ad0588;
-    align-items: center;
+.project-link:hover,
+.cta-link a:hover {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: #ffffff;
 }
 
-article p {
-    font-family: 'JetBrains Mono', monospace;
+.cta-link {
+    margin: 10px auto 40px;
+    text-align: center;
 }
 
-/* ===============================
-   Contact page & form styling
-   ================================ */
+
+/* ==========================================================
+   8. CONTACT PAGE
+   ========================================================== */
+
 .contact-page {
     display: flex;
     justify-content: center;
     align-items: stretch;
     gap: 40px;
+    max-width: 1200px;
     margin: 15px auto;
     padding: 20px;
 }
 
 #contact-info,
-#form {
+#contact-form {
     flex: 1;
-    border-radius: 10px;
-    padding: 30px;
     max-width: 550px;
     padding: 30px;
-    box-sizing: border-box;
-    margin-top: 0%;
-  
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    text-align: left;
 }
 
-/* Contact card */
 #contact-info {
-    flex: 1;
-    min-width: 350px;
-    max-width: 500px;
-    text-align: left;
-}
- 
-/* Form card */
-#form {
-    flex: 1;
-    min-width: 1000px;
-    max-width: 1500px;
-    text-align: left;
-    margin-top: 0%;
+    min-width: 0;
 }
 
-/* Map */
+#contact-info h3 {
+    margin-top: 15px;
+    color: var(--color-plum);
+}
+
 #contact-info iframe {
     width: 100%;
     height: 300px;
-    border-radius: 10px;
     margin-top: 20px;
+    border: 0;
+    border-radius: 10px;
 }
 
-#form {
-    max-width: 1500px;
-    margin: 20px auto;
-}
+
+/* ==========================================================
+   9. FORM
+   ========================================================== */
 
 form {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin: 0;
 }
 
 form label {
     margin-top: 10px;
     font-weight: bold;
-    text-align: left;
 }
 
 form input,
-form textarea {
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+form textarea,
+form select {
     width: 100%;
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #767676;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: var(--color-text);
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
 }
+
+form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Attribute selectors: radio buttons and checkboxes stay small */
+form input[type="radio"],
+form input[type="checkbox"] {
+    width: auto;
+    margin-top: 0;
+}
+
+/* Focus state: strong outline for keyboard users */
+form input:focus,
+form textarea:focus,
+form select:focus {
+    border-color: #991490;
+    outline: 3px solid #991490;
+    outline-offset: 2px;
+}
+
+form fieldset {
+    margin-top: 10px;
+    border: 0;
+}
+
+form legend {
+    padding: 0;
+    font-weight: bold;
+}
+
 .radio-group,
 .checkbox-group {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 10px;
+    margin-top: 10px;
 }
 
-/* Attribute selectors */
-form input[type="text"],
-form input[type="email"],
-form input[type="tel"] {
-    background-color: #fff;
-}
-
-/* Pseudo-class */
-form input:focus,
-form textarea:focus {
-    border-color: #991490;
-    outline: none;
+.radio-group label,
+.checkbox-group label {
+    margin-top: 0;
+    font-weight: normal;
 }
 
 form button {
     margin-top: 15px;
     padding: 10px;
-    border: none;
-    background: #333;
-    color: white;
+    border: 2px solid var(--color-text);
     border-radius: 5px;
+    background-color: var(--color-text);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Dark text keeps good contrast on the cyan hover colour */
 form button:hover {
-    background: #006978;
+    background-color: purple;
+    color: #ffffff;
+}
+
+form button:active {
+    background-color: var(--color-plum);
+    border-color: var(--color-plum);
+    color: #ffffff;
 }
 
 
-/* ===============================
-   TABLE STYLING
-================================ */
+/* ==========================================================
+   10. TABLE
+   ========================================================== */
+
 table {
     width: 100%;
-    max-width: 600px;
-    border-collapse: collapse;
     margin: 20px auto;
+    border-collapse: collapse;
+    border: 2px solid var(--color-text);
+}
+
+caption {
+    padding-bottom: 8px;
+    color: var(--color-plum);
+    font-weight: bold;
+    text-align: left;
 }
 
 table th {
-    background: #333;
-    color: white;
-    padding: 10px;
+    padding: 8px 6px;
+    border: 1px solid var(--color-text);
+    background-color: var(--color-text);
+    color: #ffffff;
+    font-size: 0.9rem;
+    text-align: center;
 }
 
 table td {
-    border: 1px solid #ccc;
-    padding: 10px;
+    padding: 8px 6px;
+    border: 1px solid #999999;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.8rem;
     text-align: center;
-    font-family: 'JetBrains Mono', monospace;
 }
 
-table tr:nth-child(even) {
-    background: #f4f4f4;
+/* Alternating row colours */
+table tbody tr:nth-child(even) {
+    background-color: #e6e1cf;
 }
 
-table tr:hover {
-    background: #e0f7fa;
+table tbody tr:hover {
+    background-color: #d6eef2;
 }
 
 
+/* ==========================================================
+   11. CONFIRMATION PAGE (submit.html)
+   ========================================================== */
 
-/* ===============================
-   CALL TO ACTION LINKS
-================================ */
-main div a {
-    text-decoration: none;
-    background: transparent;
-    color: #333;
-    padding: 10px 15px;
-    border: 2px solid #333;
-    border-radius: 5px;
-    display: inline-block;
-    transition: 0.3s ease;
+.confirmation {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 40px 20px;
 }
 
-main div a:hover {
-    background: #ad0588;
-    border-color: #ad0588;
-    color: white;
+.confirmation h1 {
+    margin-bottom: 10px;
+    color: var(--color-accent);
 }
 
-/* ===============================
-   FOOTER
-================================ */
+.confirmation .cta-link {
+    margin: 25px 0 0;
+}
+
+
+/* ==========================================================
+   12. FOOTER
+   ========================================================== */
+
 footer {
-    background: rgb(243, 240, 228);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    padding: 25px 40px 15px;
+    margin-top: auto;
+    padding: 30px 40px 15px;
+    background-color: var(--color-bg);
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.08);
 }
 
-/* ===============================
-   FOOTER LAYOUT
-================================ */
+/* Logo | contact details | social icons */
 .footer-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
-    gap: 20px;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .footer-logo {
-    width: 70px;
-    height: auto;
-    border-radius: 8px;
     display: block;
     justify-self: start;
+    width: 75px;
+    height: auto;
+    border-radius: 8px;
 }
 
-/* ===============================
-   CONTACT SECTION
-================================ */
-.footer-container address.footer-section {
+.footer-contact {
+    font-style: normal;
     text-align: center;
 }
 
-address {
-    font-style: normal;
+.footer-contact p {
+    margin: 5px 0;
+    font-size: 0.95rem;
 }
 
-.footer-section h3 {
-    color: #1877f2;
-    margin-bottom: 12px;
-    font-size: 1.2rem;
+.footer-contact a {
+    color: var(--color-text);
+    text-decoration: underline;
 }
 
-.footer-section p,
-.footer-section a {
-    color: #333;
-    margin: 6px 0;
-    text-decoration: none;
-}
-
-.footer-section a:hover {
-    color: #1877f2;
-}
-
-/* ===============================
-   SOCIAL SECTION
-================================ */
-.footer-container section.footer-section {
-    text-align: right;
+.footer-contact a:hover {
+    color: var(--color-plum);
 }
 
 .footer-social-icons {
     display: flex;
     justify-content: flex-end;
-    gap: 15px;
+    align-items: center;
+    gap: 18px;
+    list-style: none;
 }
 
 .footer-social-icons a {
-    font-size: 1.8rem;
-    transition: all 0.3s ease;
+    font-size: 1.7rem;
+    text-decoration: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Brand colours */
+.footer-social-icons a:hover {
+    transform: translateY(-4px) scale(1.1);
+    opacity: 0.8;
+}
+
+/* Brand colours for the social icons */
 .fa-facebook {
     color: #1877f2;
 }
@@ -624,167 +741,170 @@ address {
 }
 
 .fa-github {
-    color: #333;
+    color: var(--color-text);
 }
 
-.footer-social-icons a:hover {
-    transform: translateY(-4px) scale(1.1);
-    opacity: 0.85;
-}
-
-/* ===============================
-   FOOTER BOTTOM
-================================ */
+/* Copyright line is centred */
 .footer-bottom {
-    border-top: 1px solid rgba(0, 0, 0, 0.15);
-    margin-top: 20px;
+    max-width: 1200px;
+    margin: 25px auto 0;
     padding-top: 15px;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    color: #555555;
+    font-size: 0.9rem;
     text-align: center;
 }
 
-.footer-bottom p {
-    color: #666;
-    font-size: 0.9rem;
-    margin: 0;
-}
- /* ===============================
-   GLOBAL RULES
-================================ */
 
-img {
-    max-width: 100%;
-}
+/* ==========================================================
+   13. ANIMATION
+   ========================================================== */
 
-/* Footer positioning */
-
-html,
-body {
-    height: 100%;
-}
-
-body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-main {
-    flex: 1;
-}
-
-
-/* ===============================
-   RESPONSIVE DESIGN
-================================ */
-
-@media (max-width: 768px) {
-
-    .header {
-        flex-direction: column;
-        text-align: center;
+/* Reveals the tagline one character at a time, then holds */
+@keyframes typing {
+    0% {
+        width: 0;
     }
 
-    nav ul {
-        flex-direction: column;
-        align-items: center;
+    60%,
+    100% {
+        width: 33ch;
+    }
+}
+
+/* Blinking text cursor */
+@keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Respect visitors who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+
+    .typing-text {
+        width: auto;
+        white-space: normal;
+        border-right: 0;
+        animation: none;
     }
 
-    .hero {
-        flex-direction: column;
-        text-align: center;
+    .hero,
+    .hero-image img,
+    .intro-card,
+    .card-grid > article {
+        transition: none;
+    }
+}
+
+
+/* ==========================================================
+   14. RESPONSIVE DESIGN
+   ========================================================== */
+
+/* Smaller laptops: shrink hero type so it fits its column */
+@media (max-width: 1200px) {
+
+    .hero-name {
+        font-size: 3rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .typing-text {
+        font-size: 0.9rem;
+    }
+}
+
+/* Tablets: stack the hero and the cards */
+@media (max-width: 1100px) {
+
+    .hero,
+    .card-grid {
+        grid-template-columns: 1fr;
     }
 
     .hero-left-column,
-    .hero-right-column,
-    .hero-image {
+    .hero-right-column {
         width: 100%;
+        text-align: center;
     }
 
-.hero-left-column h1,
-.hero-right-column h1,
-.hero-title {
-    font-size: 2rem;
-}
+    .typing-text {
+        margin: 0 auto;
+        font-size: 1.1rem;
+    }
+
     .hero-image img {
         width: 250px;
         margin: 20px 0;
     }
-
-    section {
-grid-template-columns: 1fr;
-}
-/* Navigation */
-
-nav ul {
-flex-direction: column;
-align-items: center;
-}
-/* General sections */
-section {
-flex-direction: column;
-align-items: center;
 }
 
-/* Cards / Articles */
+/* Phones */
+@media (max-width: 768px) {
 
-article {
-width: 90%;
-margin: 10px auto;
-}
-/* Images */
+    /* Stack the navigation */
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
 
-article img {
-max-width: 100%;
-height: auto;
-}
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
 
-/* Tables */
-table {
-width: 100%;
-overflow-x: auto;
-display: block;
-}
+    .social-icons {
+        margin-left: 0;
+        justify-content: center;
+    }
 
-/* Contact page */
+    .hero-name {
+        font-size: 2.2rem;
+    }
 
-.contact-page {
-flex-direction: column;
-}
+    .hero-title {
+        font-size: 1.6rem;
+    }
 
-#contact-info,
-#form {
-width: 90%;
-margin: 0 auto;
-}
+    .typing-text {
+        font-size: 0.85rem;
+    }
 
-/* Google map */
-iframe {
-width: 100%;
-height: 300px;
-}
+    /* Stack cards and contact blocks */
+    .about-section,
+    .contact-page {
+        flex-direction: column;
+        align-items: center;
+    }
 
-.about-section {
-grid-template-columns: 1fr;
-}    
+    .intro-card,
+    .tech-card,
+    #contact-info,
+    #contact-form {
+        width: 90%;
+        max-width: 600px;
+    }
 
-.footer-container {
+    /* Footer becomes a single centred column */
+    footer {
+        padding: 25px 20px 15px;
+    }
+
+    .footer-container {
         grid-template-columns: 1fr;
+        gap: 20px;
         text-align: center;
     }
 
     .footer-logo {
         justify-self: center;
-        margin-bottom: 15px;
-    }
-
-    .footer-container address.footer-section,
-    .footer-container section.footer-section {
-        text-align: center;
     }
 
     .footer-social-icons {
         justify-content: center;
-        margin-top: 10px;
     }
-
 }

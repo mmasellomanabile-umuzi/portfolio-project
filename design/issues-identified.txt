@@ -1,0 +1,45 @@
+IDENTIFIED ISSUES AND APPROACH
+Mmasello Manabile - Portfolio Website
+
+OVERVIEW
+I ran all four pages through the W3C Markup Validator and reviewed the HTML and CSS by hand. The validator flagged the missing lang attribute and missing image alt text, which matched my own review.
+
+HTML ISSUES FOUND
+1. No lang attribute on the <html> element.
+2. Images had no alt text.
+3. A <div class="header"> was used instead of a semantic <header>.
+4. No <nav> element and no links between pages.
+5. No <main> element.
+6. The footer sat inside the main content area.
+7. Required meta tags were missing.
+8. No images folder or image assets.
+9. No data table on the About page.
+10. Form inputs had no labels.
+11. The form had no variety (no radio, checkbox or dropdown).
+12. No HTML5 validation attributes.
+13. Page structure differed between pages.
+
+CSS ISSUES FOUND
+14. HTML tags (<br>) had been pasted into the stylesheet.
+15. No navigation styling.
+16. The .header class had no alignment styling.
+17. Poor colour contrast (light background on the hero).
+18. Only a few selector types were used.
+19. No pseudo-classes (:hover, :focus, :active).
+20. No combination selectors (child, attribute).
+21. Form styling was incomplete.
+22. The box model (margin, padding, border) was barely demonstrated.
+23. No block, inline and inline-block examples.
+24. Limited text styling (weight, transform, decoration, spacing).
+25. Limited colour use.
+26. No table styling.
+27. The footer was left-aligned instead of centred.
+
+APPROACH
+Wireframe: I sketched all four pages first (navigation and social icons at the top, content cards in the middle, a three-part footer), so every page shares one layout.
+
+HTML: I added the lang attribute and meta tags, replaced generic divs with header, nav, main, section, article and footer, linked all pages, added alt text, built a skills table, and rebuilt the form with labels, a fieldset, six input types, a dropdown and validation attributes.
+
+CSS: I moved the palette into custom properties, expanded the selectors (element, class, ID, descendant, child, attribute, pseudo-class), styled the navigation, table and form, checked every text colour against the 4.5:1 contrast ratio, centred the footer copyright, and added a CSS-only typing animation with a reduced-motion fallback.
+
+Quality: I standardised on four-space indentation, kebab-case names and section comments, removed unused rules, and validated the final files with the W3C HTML and CSS validators.

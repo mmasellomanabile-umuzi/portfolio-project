@@ -42,7 +42,7 @@ A design decision was taken to include social links on `index.html` and `submit.
 
 ## Screenshots
 
-Final site: `Screenshots/After(FinalProject)`. 
+Final site: `screenshots/After(FinalProject)`. 
 
 ![Home](<Screenshots/After(FinalProject)/index.html.png>)
 ![About and skills table](<Screenshots/After(FinalProject)/about.html.png>)

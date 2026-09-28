@@ -1,18 +1,4 @@
 /* ==========================================================
-   PORTFOLIO WEBSITE - MAIN STYLESHEET
-   Sections:
-    1. Reset               8. Contact page
-    2. Custom properties   9. Form
-    3. Global styles      10. Table
-    4. Utilities          11. Confirmation page
-    5. Header and nav     12. Footer
-    6. Home page          13. Animation
-    7. Cards and buttons  14. Responsive design
-   Naming: lowercase kebab-case for classes and IDs.
-   ========================================================== */
-
-
-/* ==========================================================
    1. RESET
    ========================================================== */
 
@@ -25,9 +11,7 @@
 
 /* ==========================================================
    2. CUSTOM PROPERTIES (colour palette)
-   Every text colour below meets the 4.5:1 contrast ratio
-   on the cream background (#f3f0e4).
-   ========================================================== */
+      ========================================================== */
 
 :root {
     --color-bg: #f3f0e4;
@@ -70,7 +54,6 @@ img {
     height: auto;
 }
 
-/* Visible keyboard focus on every link */
 a:focus {
     outline: 3px solid var(--color-accent);
     outline-offset: 3px;
@@ -103,6 +86,10 @@ a:focus {
     position: sticky;
     top: 0;
     z-index: 1000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     padding: 10px 20px;
     background: var(--color-bg);
@@ -110,11 +97,10 @@ a:focus {
 
 nav {
     display: flex;
+    flex: 1 1 auto;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
     padding: 10px 20px;
-    background: var(--color-bg);
 }
 
 .nav-links {
@@ -132,7 +118,6 @@ nav {
     transition: color 0.3s ease;
 }
 
-/* Attribute selector: highlights the page the visitor is on */
 .nav-links a[aria-current="page"] {
     color: var(--color-accent);
 }
@@ -190,11 +175,6 @@ nav {
     background-color: var(--color-bg);
     text-align: center;
     box-shadow: var(--shadow-card);
-    transition: transform 0.3s ease;
-}
-
-.hero:hover {
-    transform: translateX(-10px);
 }
 
 .hero-left-column {
@@ -241,7 +221,7 @@ nav {
     background: linear-gradient(90deg, var(--color-accent), var(--color-plum));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: typing 6s steps(33, end) infinite, blink-caret 0.8s step-end infinite;
+    animation: typing 6s steps(33, end) forwards, blink-caret 0.8s step-end infinite;
 }
 
 .hero-image {
@@ -290,12 +270,12 @@ nav {
     color: var(--color-plum);
 }
 
-/* Introduction card and tech stack card */
 .about-section {
     display: flex;
     gap: 30px;
     max-width: 1200px;
     margin: 30px auto;
+    padding: 0 20px;
 }
 
 .intro-card,
@@ -406,13 +386,17 @@ article {
     transition: transform 0.3s ease;
 }
 
-article h2 {
+article h3 {
     margin-bottom: 10px;
     color: var(--color-accent);
 }
 
 article p {
     font-family: "JetBrains Mono", monospace;
+}
+
+#background p {
+    text-align: left;
 }
 
 article img {
@@ -424,7 +408,6 @@ article img {
     border-radius: 8px;
 }
 
-/* Outlined call-to-action buttons */
 .project-link,
 .cta-link a {
     display: inline-block;
@@ -479,9 +462,9 @@ article img {
     min-width: 0;
 }
 
-#contact-info h3 {
+#contact-info h4 {
     margin-top: 15px;
-    color: var(--color-plum);
+    color: var(--color-ink);
 }
 
 #contact-info iframe {
@@ -491,7 +474,6 @@ article img {
     border: 0;
     border-radius: 10px;
 }
-
 
 /* ==========================================================
    9. FORM
@@ -522,19 +504,21 @@ form select {
     font-size: 1rem;
 }
 
+.required {
+    color: #b00020;
+}
+
 form textarea {
     min-height: 120px;
     resize: vertical;
 }
 
-/* Attribute selectors: radio buttons and checkboxes stay small */
 form input[type="radio"],
 form input[type="checkbox"] {
     width: auto;
     margin-top: 0;
 }
 
-/* Focus state: strong outline for keyboard users */
 form input:focus,
 form textarea:focus,
 form select:focus {
@@ -569,28 +553,26 @@ form legend {
 }
 
 form button {
-    margin-top: 15px;
-    padding: 10px;
-    border: 2px solid var(--color-text);
-    border-radius: 5px;
+    display: block;
+    margin: 20px auto 0;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
     background-color: var(--color-text);
     color: #ffffff;
-    font-size: 1rem;
+    font-family: "JetBrains Mono", monospace;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
-/* Dark text keeps good contrast on the cyan hover colour */
+/* Accent background keeps the white text above 4.5:1 (6.66:1) */
 form button:hover {
-    background-color: purple;
-    color: #ffffff;
+    background-color: var(--color-accent);
 }
 
 form button:active {
     background-color: var(--color-plum);
-    border-color: var(--color-plum);
-    color: #ffffff;
 }
 
 
@@ -671,7 +653,6 @@ footer {
     box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.08);
 }
 
-/* Logo | contact details | social icons */
 .footer-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -727,7 +708,6 @@ footer {
     opacity: 0.8;
 }
 
-/* Brand colours for the social icons */
 .fa-facebook {
     color: #1877f2;
 }
@@ -744,7 +724,6 @@ footer {
     color: var(--color-text);
 }
 
-/* Copyright line is centred */
 .footer-bottom {
     max-width: 1200px;
     margin: 25px auto 0;
@@ -760,7 +739,6 @@ footer {
    13. ANIMATION
    ========================================================== */
 
-/* Reveals the tagline one character at a time, then holds */
 @keyframes typing {
     0% {
         width: 0;
@@ -772,14 +750,12 @@ footer {
     }
 }
 
-/* Blinking text cursor */
 @keyframes blink-caret {
     50% {
         border-color: transparent;
     }
 }
 
-/* Respect visitors who prefer less motion */
 @media (prefers-reduced-motion: reduce) {
 
     .typing-text {
@@ -789,7 +765,6 @@ footer {
         animation: none;
     }
 
-    .hero,
     .hero-image img,
     .intro-card,
     .card-grid > article {
@@ -818,7 +793,6 @@ footer {
     }
 }
 
-/* Tablets: stack the hero and the cards */
 @media (max-width: 1100px) {
 
     .hero,
@@ -843,13 +817,22 @@ footer {
     }
 }
 
-/* Phones */
 @media (max-width: 768px) {
 
-    /* Stack the navigation */
+    /* Stack the header: navigation first, page title centred beneath it */
+    .page-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
     nav {
         flex-direction: column;
         gap: 15px;
+    }
+
+    .page-title {
+        margin-left: 0;
+        text-align: center;
     }
 
     .nav-links {

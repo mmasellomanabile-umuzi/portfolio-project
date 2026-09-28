@@ -11,15 +11,17 @@ A multi-page portfolio for an aspiring Software Developer, built with HTML5 and 
 
 ## Fixes Implemented
 
-- Added semantic landmarks and one consistent header, navigation and footer on every page.
+- Added semantic landmarks, and the same navigation menu and footer on every page.
 - Added descriptive `alt` text to all images and a skills table on the About page.
 - Rebuilt the contact form with labels, a `fieldset`, six input types plus a dropdown, and HTML5 validation.
 - Added navigation, table and form styling, hover, focus and active states, a CSS-only typing animation and responsive layouts.
-- Fixed contrast, footer alignment, indentation, naming and redundant code, and added comments and custom properties.
+- Fixed contrast (including the form button hover and required markers), footer alignment, indentation, naming and redundant code, and added comments and custom properties.
 
 ## HTML Structure
 
 Every page uses `<header>` with `<nav>`, `<main>` (holding `<section>` and `<article>` blocks) and `<footer>`. The only non-semantic `<div>` is the footer layout wrapper. Each page has one `<h1>`, headings follow in order, and the current page link carries `aria-current="page"`.
+
+A design decision was taken to include social links on `index.html` and `submit.html` only, as this presents the site better.
 
 ## CSS Approach
 
@@ -27,7 +29,7 @@ Every page uses `<header>` with `<nav>`, `<main>` (holding `<section>` and `<art
 
 ## Accessibility Improvements
 
-- Text colours meet the 4.5:1 contrast ratio.
+- All text colours, including hover states and required markers, meet the 4.5:1 contrast ratio.
 - Every form control has a label, and radio buttons sit in a `fieldset` with a `legend`.
 - Visible `:focus` outlines, image `alt` text, an iframe `title` and `aria-label`s on icon-only links.
 - The typing animation stops for visitors who prefer reduced motion.
@@ -40,29 +42,27 @@ Every page uses `<header>` with `<nav>`, `<main>` (holding `<section>` and `<art
 
 ## Screenshots
 
-all screenshots are located in folder -Screenshots/After(FinalProject)/Before(StarterCode)
+Final site: `Screenshots/After(FinalProject)`. 
 
+![Home](<Screenshots/After(FinalProject)/index.html.png>)
+![About and skills table](<Screenshots/After(FinalProject)/about.html.png>)
+![Projects](<Screenshots/After(FinalProject)/projects.html.png>)
+![Contact form](<Screenshots/After(FinalProject)/contact.html.png>)
+![Confirmation](<Screenshots/After(FinalProject)/submit.html.png>)
+![CSS validation](<Screenshots/After(FinalProject)/CSS Validation.png>)
+![Home validation](<Screenshots/After(FinalProject)/indexW3c validator.png>)
+![About validation](<Screenshots/After(FinalProject)/W3C_about.html.png>)
+![Contact validation](<Screenshots/After(FinalProject)/W3C_contact.html.png>)
+![Projects validation](<Screenshots/After(FinalProject)/W3C_projects.html.png>)
+![Navigation hover state](<Screenshots/After(FinalProject)/nav-hover.png>)
 
-| Home | About |
-|---|---|
-| ![Home page](screenshots/homepage.png) | ![About page](screenshots/about.png) |
-
-| Projects | Contact |
-|---|---|
-| ![Projects page](screenshots/projects.png) | ![Contact page](screenshots/contact.png) |
-
-| Form | Table |
-|---|---|
-| ![Contact form](screenshots/form.png) | ![Skills table](screenshots/table.png) |
-
-| Navigation hover | W3C validation |
-|---|---|
-| ![Navigation hover](screenshots/nav-hover.png) | ![W3C results](screenshots/w3c-validation.png) |
-
-![Before and after](screenshots/before-after.png)
 
 ## Reflection
 
-**Invalid CSS value.** A `nav :hover` rule contained `transform: matrix(-10)`, which is invalid because `matrix()` needs six values. Reading the W3C CSS validator output line by line led me straight to it. I removed it and scoped the rule to `nav a:hover`, so only the links change colour.
+Debugging the starter code taught me to measure problems instead of guessing. Three examples:
 
-**Unclosed tag.** `contact.html` was missing its closing `</footer>`. Browsers correct this silently, so the page looked fine and only the HTML validator exposed it. I learned to validate with tools rather than trust how a page looks.
+- **Pasted HTML in the stylesheet.** The CSS contained stray `<br>` tags. I found them by reading the file, removed them, and re-ran the W3C CSS validator until it reported no errors.
+- **An invalid hover rule.** `nav :hover` used `transform: matrix(-10)`, which the validator rejects, and the selector recoloured everything inside the nav. I replaced it with `.nav-links a:hover` and a simple colour transition.
+- **Contrast that only looked fine.** My first form-button hover colour still failed. Calculating the ratio showed 3.77:1, so I switched to the darker accent colour (6.66:1) and did the same for the required-field asterisk.
+
+I also missed a closing `</footer>` in `contact.html` until feedback pointed it out. Re-running both validators after every change is now my habit.

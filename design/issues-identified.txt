@@ -35,6 +35,21 @@ CSS ISSUES FOUND
 26. No table styling.
 27. The footer was left-aligned instead of centred.
 
+Fixes Implemented
+
+- Added semantic landmarks, and the same navigation menu and footer on every page.
+- Added descriptive `alt` text to all images and a skills table on the About page.
+- Rebuilt the contact form with labels, a `fieldset`, six input types plus a dropdown, and HTML5 validation.
+- Added navigation, table and form styling, hover, focus and active states, a CSS-only typing animation and responsive layouts.
+- Fixed contrast (including the form button hover and required markers), footer alignment, indentation, naming and redundant code, and added comments and custom properties.
+
+HTML Structure: 
+
+Every page uses `<header>` with `<nav>`, `<main>` (holding `<section>` and `<article>` blocks) and `<footer>`. The only non-semantic `<div>` is the footer layout wrapper. Each page has one `<h1>`, headings follow in order, and the current page link carries `aria-current="page"`.
+
+A design decision was taken to include social links on `index.html` and `submit.html` only, as this presents the site better.
+
+
 APPROACH
 Wireframe: I sketched all four pages first (navigation and social icons at the top, content cards in the middle, a three-part footer), so every page shares one layout.
 

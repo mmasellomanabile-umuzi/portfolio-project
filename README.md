@@ -66,3 +66,5 @@ Debugging the starter code taught me to measure problems instead of guessing. Th
 - **Contrast that only looked fine.** My first form-button hover colour still failed. Calculating the ratio showed 3.77:1, so I switched to the darker accent colour (6.66:1) and did the same for the required-field asterisk.
 
 I also missed a closing `</footer>` in `contact.html` until feedback pointed it out. Re-running both validators after every change is now my habit.
+
+- The issues found have been documented in a .pdf file (design/issues-identified.txt)
